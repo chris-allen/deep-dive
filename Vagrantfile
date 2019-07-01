@@ -21,6 +21,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.boot_timeout = 120
 
+  # config.vm.network :forwarded_port, guest: 80, host: 8080    # nginx
+  # config.vm.network :forwarded_port, guest: 8888, host: 8888  # php -S
+
   config.vm.synced_folder "./", "/home/vagrant/deep-dive"
 
   # OSX needs this for concurrent open files
